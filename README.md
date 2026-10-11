@@ -94,8 +94,7 @@ SELECT
 FROM ranked_wines
 ORDER BY rnk;
 ## 📊 Визуализация в Power BI
-
-![Дашборд](https://github.com/user-attachments/assets/cee4587c-eec3-4d9f-bdb3-5ad4c1749b63)
+<img width="1279" height="720" alt="image" src="https://github.com/user-attachments/assets/0cb518f1-4d0f-44ef-8714-b05e048caeb9" />
 
 Интерактивный дашборд создан в **Power BI Desktop** и включает:
 - **Финансовые показатели**: рост прибыли (+5%) при падении выручки (-62%)

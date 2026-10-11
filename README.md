@@ -94,8 +94,7 @@ SELECT
 FROM ranked_wines
 ORDER BY rnk;
 ## Визуализация в Power BI
-![Power BI Dashboard](https://github.com/user-attachments/assets/cee4587c-eec3-4d9f-bdb3-5ad4c1749b63)
-
+   ![Дашборд Power BI](https://github.com/user-attachments/assets/cee4587c-eec3-4d9f-bdb3-5ad4c1749b63)
 Интерактивный дашборд создан в **Power BI Desktop** и включает:
 
 ### Ключевые визуализации:
@@ -114,3 +113,5 @@ ORDER BY rnk;
 
 ### Файл дашборда:
 `Abrau_Durso_Dashboard.pbix` — откройте в Power BI Desktop для интерактивного анализа
+<img width="1279" height="720" alt="dashboard png" src="https://github.com/user-attachments/assets/734b4f5d-b134-45b0-ae5c-77a740f233a9" />
+

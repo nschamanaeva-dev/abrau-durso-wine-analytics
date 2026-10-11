@@ -70,7 +70,7 @@ SELECT
 FROM sales s
 JOIN wines w ON s.wine_id = w.wine_id
 GROUP BY w.line, w.segment
-ORDER BY 'Выручка (руб)' DESC;
+ORDER BY 'Выручка (руб)' DESC;```
 
 ### Запрос 2: Анализ принципа Парето (80/20) с оконными функциями
 WITH wine_revenue AS (

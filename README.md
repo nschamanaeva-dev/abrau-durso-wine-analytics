@@ -94,6 +94,7 @@ SELECT
 FROM ranked_wines
 ORDER BY rnk;
 ## Визуализация в Power BI
+<img width="1285" height="722" alt="image" src="https://github.com/user-attachments/assets/bd01b926-ee7c-40b7-b5de-d7fe8b9768bd" />
 
 Интерактивный дашборд создан в **Power BI Desktop** и включает:
 

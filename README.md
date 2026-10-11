@@ -1,4 +1,3 @@
-<img width="1279" height="720" alt="dashboard" src="https://github.com/user-attachments/assets/d0473c06-047d-4098-9295-c56bed302865" />
 # Аналитика портфеля вин ПАО «Абрау-Дюрсо»
 
 SQL-проект по анализу продуктовой матрицы и финансовых показателей ведущего российского производителя игристых вин.
@@ -94,9 +93,8 @@ SELECT
     END AS 'Категория Парето'
 FROM ranked_wines
 ORDER BY rnk;
+<img width="1279" height="720" alt="dashboard" src="https://github.com/user-attachments/assets/d0473c06-047d-4098-9295-c56bed302865" />
 ## 📊 Визуализация в Power BI
-!<img width="1279" height="720" alt="image" src="https://github.com/user-attachments/assets/0cb518f1-4d0f-44ef-8714-b05e048caeb9" />
-
 Интерактивный дашборд создан в **Power BI Desktop** и включает:
 - **Финансовые показатели**: рост прибыли (+5%) при падении выручки (-62%)
 - **Выручка по линейкам**: Classic генерирует ~60% выручки

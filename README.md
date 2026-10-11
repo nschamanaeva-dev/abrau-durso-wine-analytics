@@ -54,10 +54,13 @@ SQL-проект по анализу продуктовой матрицы и ф
 - **Выручка по линейкам**: Classic генерирует ~60% выручки
 - **Интерактивный фильтр** по сегментам (standard/premium/luxury)
 
-📥 Файл дашборда: `Abrau_Durso_Dashboard.pbix`
+Файл дашборда: `Abrau_Durso_Dashboard.pbix`
 
-##  SQL-запросы
+## SQL-запросы
+
 ### Запрос 1: Выручка по линейкам и сегментам
+Базовая агрегация продаж с использованием `JOIN` и `GROUP BY` для оценки вклада каждой линейки.
+
 ```sql
 SELECT 
     w.line AS 'Линейка',
@@ -68,7 +71,10 @@ FROM sales s
 JOIN wines w ON s.wine_id = w.wine_id
 GROUP BY w.line, w.segment
 ORDER BY 'Выручка (руб)' DESC;
+
+### Запрос 2: Анализ принципа Парето (80/20) с оконными функциями
 WITH wine_revenue AS (
+    -- Шаг 1: Считаем выручку по каждому вину
     SELECT 
         w.wine_id, w.name AS wine_name, w.line, w.segment,
         SUM(s.quantity_bottles) AS total_bottles,
@@ -78,6 +84,7 @@ WITH wine_revenue AS (
     GROUP BY w.wine_id, w.name, w.line, w.segment
 ),
 ranked_wines AS (
+    -- Шаг 2: Ранжируем и считаем накопительную сумму
     SELECT 
         wine_name, line, segment, total_bottles, revenue,
         ROW_NUMBER() OVER (ORDER BY revenue DESC) AS rnk,
@@ -85,6 +92,7 @@ ranked_wines AS (
         SUM(revenue) OVER () AS total_revenue
     FROM wine_revenue
 )
+-- Шаг 3: Выводим результат с категоризацией
 SELECT 
     rnk AS 'Рейтинг',
     wine_name AS 'Название вина',
@@ -100,3 +108,4 @@ SELECT
     END AS 'Категория Парето'
 FROM ranked_wines
 ORDER BY rnk;
+

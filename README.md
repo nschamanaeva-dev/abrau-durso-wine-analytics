@@ -93,25 +93,13 @@ SELECT
     END AS 'Категория Парето'
 FROM ranked_wines
 ORDER BY rnk;
-## Визуализация в Power BI
-   ![Дашборд Power BI](https://github.com/user-attachments/assets/cee4587c-eec3-4d9f-bdb3-5ad4c1749b63)
+## 📊 Визуализация в Power BI
+
+![Дашборд](https://github.com/user-attachments/assets/cee4587c-eec3-4d9f-bdb3-5ad4c1749b63)
+
 Интерактивный дашборд создан в **Power BI Desktop** и включает:
+- **Финансовые показатели**: рост прибыли (+5%) при падении выручки (-62%)
+- **Выручка по линейкам**: Classic генерирует ~60% выручки
+- **Интерактивный фильтр** по сегментам (standard/premium/luxury)
 
-### Ключевые визуализации:
-1. **Финансовые показатели ПАО «Абрау-Дюрсо» (млн руб.)**
-   - Выручка и чистая прибыль за 1 полугодие 2025 и 2026 гг.
-   - Показывает рост прибыли (+5%) несмотря на падение выручки (-62%)
-
-2. **Выручка по линейкам вин (руб.)**
-   - Classic генерирует ~60% выручки (71 358 руб.)
-   - Люксовые линейки (Brut d'Or, Imperial) дают ~27% при малых объемах
-
-3. **Интерактивный фильтр по сегментам**
-   - Позволяет анализировать данные в разрезе standard/premium/luxury
-
-4. **KPI-карточка** — общая выручка портфеля
-
-### Файл дашборда:
-`Abrau_Durso_Dashboard.pbix` — откройте в Power BI Desktop для интерактивного анализа
-<img width="1279" height="720" alt="dashboard png" src="https://github.com/user-attachments/assets/734b4f5d-b134-45b0-ae5c-77a740f233a9" />
-
+📥 Файл дашборда: `Abrau_Durso_Dashboard.pbix`
